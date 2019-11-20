@@ -233,20 +233,20 @@
                     </div>
                 </div>
                 <div class="col m6 s12 wow slideInRight slow">
-                    <form action="contact.php" method="post">
+                    <form action="send.php" method="post">
                         <div class="card-panel">
                             <h5>Send us message</h5>
                             <br>
                             <div class="input-field">
-                                <input placeholder="Your Name" id="name" type="text" class="validate">
+                                <input placeholder="Your Name" name="name" id="name" type="text" class="validate">
                                 <label for="name">Name</label>
                             </div>
                             <div class="input-field">
-                                <input placeholder="Your Email" id="email" type="email" class="validate">
+                                <input placeholder="Your Email" name="email" id="email" type="email" class="validate">
                                 <label for="email">Email</label>
                             </div>
                             <div class="input-field">
-                                <textarea id="message" class="materialize-textarea"></textarea>
+                                <textarea id="message" name="message" class="materialize-textarea"></textarea>
                                 <label for="message">Message</label>
                             </div>
                             <div class="input-field">
