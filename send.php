@@ -1,22 +1,44 @@
-<?php 
+<?php
 if(isset($_POST['send'])){
-	ini_set( 'display_errors',1);
-	error_reporting( E_ALL );
-
-	$admin = "pure.cianjur@gmail.com";
-	$name = htmlentities($_POST['name']);
-	$email = htmlentities($_POST['email']);
-	$subject = 'Cust Message';
-	$message = htmlentities($_POST['message']);
-
-	$sender = 'From:'.$name.' <'.$email.'>';
-
-	if(mail($admin, $subject, $message, $sender)){
-		echo "<script>alert('Message sent!')</script>";
-		header("Location:index.html");
-	}
-
-}else{
-	header("Location:index.html");
+    // Get the submitted form data
+    $email = htmlentities($_POST['email']);
+    $name = htmlentities($_POST['name']);
+    $subject = 'Customer';
+    $message = htmlentities($_POST['message']);
+    $fromMail = 'admin@purecianjur.com';
+    
+    // Cek apakah ada data yang belum diisi
+    if(!empty($email) && !empty($name) && !empty($subject) && !empty($message)){
+        
+        if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
+        	echo "<script type='text/javascript'>alert('Alamat email salah!');history.back(self);</script>";
+        }else{
+            // Pengaturan penerima email dan subjek email
+            $toEmail = 'pure.cianjur@gmail.com'; // Ganti dengan alamat email yang Anda inginkan
+            $emailSubject = 'Pesan website dari '.$name;
+            $htmlContent = '<h2> via Form Kontak Website</h2>
+                <h5>Name : </h5>'.$name.'
+                <h5>Email : </h5>'.$email.'
+                <h5>Subject : </h5>'.$subject.'
+                <h5>Message</h5><p>'.$message.'</p>';
+            
+            // Mengatur Content-Type header untuk mengirim email dalam bentuk HTML
+            $headers = "MIME-Version: 1.0" . "\r\n";
+            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+            
+            // Header tambahan
+            $headers .= 'From: admin <'.$fromMail.'>'. "\r\n";
+            
+            // Send email
+            if(mail($toEmail,$emailSubject,$htmlContent,$headers)){
+                echo "<script type='text/javascript'>alert('Pesan terkirim!');history.back(self);</script>";
+            }else{
+            	echo "<script type='text/javascript'> alert('Pesan tidak terkirim!');history.back(self);</script>";
+            }
+        }
+    }else{
+    	echo "<script type='text/javascript'>alert('Isikan semua data!');history.back(self);</script>";
+    }
 }
+
 ?>
