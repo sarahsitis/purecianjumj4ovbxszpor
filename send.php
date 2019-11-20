@@ -17,10 +17,10 @@ if(isset($_POST['send'])){
             $toEmail = 'pure.cianjur@gmail.com'; // Ganti dengan alamat email yang Anda inginkan
             $emailSubject = 'Pesan website dari '.$name;
             $htmlContent = '<h2> via Form Kontak Website</h2>
-                <h5>Name : </h5>'.$name.'
-                <h5>Email : </h5>'.$email.'
-                <h5>Subject : </h5>'.$subject.'
-                <h5>Message</h5><p>'.$message.'</p>';
+                <h4>Name : '.$name.'</h4>
+                <h4>Email : '.$email.'</h4>
+                <h4>Subject : '.$subject.'</h4>
+                <h4>Message</h4><p>'.$message.'</p>';
             
             // Mengatur Content-Type header untuk mengirim email dalam bentuk HTML
             $headers = "MIME-Version: 1.0" . "\r\n";
@@ -31,7 +31,8 @@ if(isset($_POST['send'])){
             
             // Send email
             if(mail($toEmail,$emailSubject,$htmlContent,$headers)){
-                echo "<script type='text/javascript'>alert('Pesan terkirim!');history.back(self);</script>";
+                echo "<script type='text/javascript'>alert('Pesan terkirim!');
+                window.location.assign('http://purecianjur.com');</script>";
             }else{
             	echo "<script type='text/javascript'> alert('Pesan tidak terkirim!');history.back(self);</script>";
             }
