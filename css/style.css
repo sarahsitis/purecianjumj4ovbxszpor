@@ -1,0 +1,57 @@
+.slider h3,
+.slider h5,
+.clients {
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5) ;
+    min-height: 300px;
+}
+
+.parallax-container {
+    height: 30%;
+}
+
+.parallax img {
+    filter: blur(0.2rem);    
+}
+
+.clients img {
+    margin: 30px auto;
+    filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.8));
+}
+
+section {
+    padding: 20px 0;
+}
+
+section h3 {
+    padding-bottom: 20px;
+}
+
+.card-panel img {
+    width: 130px;
+}
+
+.contact iframe {
+    min-height: 350px;
+}
+
+.quote {
+    background-color: transparent !important;
+}
+
+#quotes img {
+    width: 100px !important;
+    position: absolute;
+    right: 10px;
+}
+
+.quote h5 {
+    color: teal !important;
+}
+
+.about p {
+    text-align: justify;
+}
+
+
+
+
