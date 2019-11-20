@@ -53,28 +53,28 @@
                 <img src="img/slider/slider1.jpg"> <!-- random image -->
                 <div class="caption left-align">
                     <h3>Berasku Beras Cianjur</h3>
-                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
                 </div>
             </li>
             <li>
                 <img src="img/slider/slider2.jpg"> <!-- random image -->
                 <div class="caption center-align">
                     <h3>Beras Wangi dan Pulen</h3>
-                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
                 </div>
             </li>
             <li>
                 <img src="img/slider/slider3.jpg"> <!-- random image -->
                 <div class="caption left-align">
                     <h3>Dengan Perlakuan Organik</h3>
-                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
                 </div>
             </li>
             <li>
                 <img src="img/slider/slider5.jpg"> <!-- random image -->
                 <div class="caption center-align">
                     <h3>Bantu Sejahterakan Petani Lokal</h3>
-                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
                 </div>
             </li>
         </ul>
